@@ -1,0 +1,12 @@
+# https://github.com/bulletmark/libinput-gestures
+sudo gpasswd -a $USER input
+exec su -l $USER
+
+sudo apt install -u wmctrl xdotool libinput-tools
+
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo make install
+
+libinput-gestures-setup autostart
+libinput-gestures-setup start

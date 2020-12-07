@@ -1,0 +1,9 @@
+git clone https://github.com/kvalo/ath10k-firmware.git
+cd /usr/lib/firmware/ath10k/QCA6174/hw3.0/
+mv board-2.bin board-2.bin.old
+mv firmware-6.bin firmware-6.bin.old
+cd ~/git/ath10k-firmware.git
+cp board-2.bin /usr/lib/firmware/ath10k/QCA6174/hw3.0/
+cp 4.4.1.c3/firmware-6.bin_WLAN.RM.4.4.1.c3-00123 \
+	/usr/lib/firmware/ath10k/QCA6174/hw3.0/firmware-6.bin  
+

@@ -1,0 +1,8 @@
+#mkdir -p ~/.config/pulse
+#cp -r /etc/pulse/ ~/.config/pulse
+#
+## https://wiki.archlinux.org/index.php/PulseAudio/Examples#Set_the_default_output_sink
+echo "set-default-sink bluez_sink.2C_41_A1_C6_E0_1D.a2dp_sink" >> ~/.config/pulse/default.pa
+#
+## https://wiki.archlinux.org/index.php/PulseAudio/Examples#Set_the_default_output_sink_profile
+echo "set-card-profile bluez_card.2C_41_A1_C6_E0_1D a2dp_sink" >> ~/.config/pulse/default.pa

@@ -1,0 +1,3 @@
+sudo apt install gnome-shell-extension-bluetooth-quick-connect
+killall -SIGQUIT gnome-shell
+gnome-extensions enable bluetooth-quick-connect@bjarosze.gmail.com

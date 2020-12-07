@@ -1,0 +1,11 @@
+Remove/Disable  'Tiling' -> 'Toggle stacking mode outside management mode'
+
+#Add Custome Shortcut - "Launch Spotify"
+#ln -s /var/lib/snapd/desktop/applications/spotify_spotify.desktop \
+#    ~/.local/share/applications/spotify.desktop
+#
+gtk-launch spotify
+
+
+
+
