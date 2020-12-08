@@ -1,0 +1,1 @@
+wget https://raw.githubusercontent.com/nginx/nginx/master/contrib/vim/syntax/nginx.vim -O ~/.vim/
