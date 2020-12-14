@@ -39,6 +39,7 @@ sudo update-alternatives --set x-terminal-emulator /usr/bin/kitty
 ## Azure
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 az login
+az config set extension.use_dynamic_install=yes_without_prompt'
 
 
 wget https://go.microsoft.com/fwlink/p/\?LinkID\=2112886\&clcid\=0x1009\&culture\=en-ca\&country\=CA -O /tmp/teams.deb

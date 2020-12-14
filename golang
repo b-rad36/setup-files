@@ -1,0 +1,3 @@
+# https://golang.org/doc/install
+wget https://dl.google.com/go/go1.15.6.linux-amd64.tar.gz -O /tmp/go1.15.6.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf /tmp/go1.15.6.linux-amd64.tar.gz

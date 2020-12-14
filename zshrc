@@ -106,6 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls --color=tty -lAF"
 alias lt="tree -alFL 1"
+alias nnn="nnn -e"
+alias n="nnn"
 
 
 # BRAD EDITS
@@ -133,3 +135,36 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add local bin to PATH
 export PATH=$PATH:$HOME/.local/bin
+
+# Add golang to PATH
+export PATH=$PATH:/usr/local/go/bin
+
+
+# nnn
+#n ()
+#{
+#    # Block nesting of nnn in subshells
+#    if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
+#        echo "nnn is already running"
+#        return
+#    fi
+#
+#    # The default behaviour is to cd on quit (nnn checks if NNN_TMPFILE is set)
+#    # To cd on quit only on ^G, remove the "export" as in:
+#    #     NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+#    # NOTE: NNN_TMPFILE is fixed, should not be modified
+#    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+#
+#    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
+#    # stty start undef
+#    # stty stop undef
+#    # stty lwrap undef
+#    # stty lnext undef
+#
+#    nnn "$@"
+#
+#    if [ -f "$NNN_TMPFILE" ]; then
+#            . "$NNN_TMPFILE"
+#            rm -f "$NNN_TMPFILE" > /dev/null
+#    fi
+#}
