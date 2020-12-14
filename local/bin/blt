@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Connect to BOSE QC35 II
+bluetoothctl info 2C:41:A1:C6:E0:1D | grep -q 'Connected: yes'
+[ $? -eq 0 ] || (bluetoothctl connect 2C:41:A1:C6:E0:1D && new_connection=true) || exit $?
+
+active_sink=$(pactl list sinks short \
+  | grep '2C_41_A1_C6_E0_1D\|RUNNING' \
+  | awk '{split($2,array,"\."); print array[3] }') 
+
+if [ "$new_connection" = "true" ] || [ "$active_sink" = "headset_head_unit" ]; then
+    blt-a2p \
+      && pactl set-default-source bluez_sink.2C_41_A1_C6_E0_1D.a2dp_sink.monitor \
+      && pactl set-default-sink bluez_sink.2C_41_A1_C6_E0_1D.a2dp_sink
+else
+    blt-hsp
+fi
