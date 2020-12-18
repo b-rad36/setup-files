@@ -13,3 +13,5 @@ cp -r kitty ~/.config/
 
 sudo apt-get install ubuntu-restricted-extras 
 sudo updatedb
+git config pull.rebase false
+git config --global --edit
