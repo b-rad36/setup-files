@@ -3,3 +3,4 @@
 #active_profile="$(pactl list | grep 'Active Profile' | tail -n 1 | awk '{print $3}')"
 
 pactl set-card-profile bluez_card.2C_41_A1_C6_E0_1D headset_head_unit
+echo "Set headset_head_unit"

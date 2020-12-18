@@ -1,5 +1,6 @@
 # https://github.com/nvm-sh/nvm
 rm ~/.bash_profile ~/.profile ~/.bashrc
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.1/install.sh | bash
+source ~/.zshrc
 hash -r
 command -v nvm

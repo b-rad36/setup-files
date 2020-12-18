@@ -4,6 +4,7 @@
 
 # Set audio profile to A2DP
 pactl set-card-profile bluez_card.2C_41_A1_C6_E0_1D a2dp_sink
+echo "Set a2dp_sink"
 
 # Set audio profile to HSP
 #pactl set-card-profile bluez_card.2C_41_A1_C6_E0_1D headset_head_unit

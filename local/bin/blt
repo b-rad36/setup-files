@@ -2,7 +2,10 @@
 
 # Connect to BOSE QC35 II
 bluetoothctl info 2C:41:A1:C6:E0:1D | grep -q 'Connected: yes'
-[ $? -eq 0 ] || (bluetoothctl connect 2C:41:A1:C6:E0:1D && new_connection=true) || exit $?
+if [ $? -eq 0 ]; then
+    bluetoothctl connect 2C:41:A1:C6:E0:1D \
+        && new_connection=true
+fi
 
 active_sink=$(pactl list sinks short \
   | grep '2C_41_A1_C6_E0_1D\|RUNNING' \

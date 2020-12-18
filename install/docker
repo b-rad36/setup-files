@@ -23,4 +23,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # add user to docker group
 sudo groupadd docker
+sudo usermod -aG docker
 exec su -l $USER
