@@ -1,6 +1,7 @@
 sudo apt update
 sudo apt full-upgrade
-sudo apt install git vim curl mlocate tree zsh jq kitty zsh-syntax-highlighting nnn yamllint dos2unix  vlc htop dconf-editor nmap gnome-tweaks
+sudo apt install git vim curl mlocate tree zsh jq kitty zsh-syntax-highlighting nnn yamllint \
+  dos2unix  vlc htop dconf-editor nmap gnome-tweaks ntp npm ncal
 
 #sudo snap install kubectl --classic
 #sudo snap install spotify bashtop
