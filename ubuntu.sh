@@ -1,7 +1,7 @@
 sudo apt update
 sudo apt full-upgrade
 sudo apt install git vim curl mlocate tree zsh jq kitty zsh-syntax-highlighting nnn yamllint \
-  dos2unix  vlc htop dconf-editor nmap gnome-tweaks ntp npm ncal
+  dos2unix vlc htop dconf-editor nmap gnome-tweaks ntp npm nca python3-pip
 
 #sudo snap install kubectl --classic
 #sudo snap install spotify bashtop
@@ -9,7 +9,7 @@ sudo apt install git vim curl mlocate tree zsh jq kitty zsh-syntax-highlighting 
 
 mkdir -p ~/.local/bin
 
- git clone https://github.com/bgavan58/setup-files.git
+git clone https://github.com/bgavan58/setup-files.git
 cp -r kitty ~/.config/
 
 sudo apt-get install ubuntu-restricted-extras 

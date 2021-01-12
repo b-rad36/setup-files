@@ -1,0 +1,3 @@
+# https://github.com/go-task/task
+# https://taskfile.dev/#/installation?id=get-the-binary
+sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b ~/.local/bin
