@@ -1,0 +1,6 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Bradley Gavan
+	email = bgavan58@gmail.com
+[core]
+	excludesfile = /home/b-rad/.gitignore
