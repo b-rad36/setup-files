@@ -1,0 +1,30 @@
+#https://github.com/antonbabenko/pre-commit-terraform
+
+#sudo apt install python3-pip #gawk &&\
+pip3 install pre-commit
+
+# 1. Install dependencies
+## https://github.com/terraform-docs/terraform-docs
+## https://github.com/terraform-linters/tflint
+### Plugins azurerm
+## https://github.com/tfsec/tfsec
+
+# 2. Install the pre-commit hook globally
+DIR=~/.git-template
+git config --global init.templateDir ${DIR}
+pre-commit init-templatedir -t pre-commit ${DIR}
+
+# 3. Add configs and hooks
+## Step into the repository you want to have the pre-commit hooks installed and run:
+#git init
+#cat <<EOF > .pre-commit-config.yaml
+#repos:
+#- repo: git://github.com/antonbabenko/pre-commit-terraform
+#  rev: <VERSION> # Get the latest from: https://github.com/antonbabenko/pre-commit-terraform/releases
+#  hooks:
+#    - id: terraform_fmt
+#    - id: terraform_docs
+#EOF
+
+#4. Run
+##pre-commit run -a
