@@ -93,3 +93,8 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " BRAD EDITS
 source ~/.vimrc_colors
+
+
+" terraform stuff
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
